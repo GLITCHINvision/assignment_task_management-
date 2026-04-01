@@ -1,4 +1,4 @@
-# 🎓 TaskFlow: Advanced Task Management System
+#  TaskFlow: Advanced Task Management System
 
 Welcome to **TaskFlow**! This is a full-stack web application designed to help users organize their daily tasks efficiently. 
 
@@ -6,7 +6,7 @@ This project was built using a modern **MERN-like stack** (using Next.js and SQL
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 To understand how TaskFlow works, we can look at it in three main parts: the **Frontend**, the **Backend**, and the **Database**.
 
@@ -37,7 +37,7 @@ graph TD
 
 ---
 
-## 🌟 How It Works (Walkthrough)
+##  How It Works (Walkthrough)
 
 ### Step 1: Secure Entry (Authentication)
 Users must first **Register** and **Login**. 
@@ -57,15 +57,15 @@ Once logged in, you see your personal workspace.
 
 ---
 
-## 🛠️ Techniques & Methods (Explained Simply)
+##  Techniques & Methods (Explained Simply)
 
-### 🔑 JWT (JSON Web Tokens)
+###  JWT (JSON Web Tokens)
 Instead of the server remembering every user, it gives the user a "Digital ID Card" (the token). The user shows this card every time they want to see their tasks. It's like a hall pass in college!
 
-### 🧱 Middleware
+###  Middleware
 Middleware is like a security guard. Before a request reaches the "Chef" (Service), the "Security Guard" (Middleware) checks if the user has a valid ID card.
 
-### 🍱 CRUD Operations
+###  CRUD Operations
 This is the heart of most apps:
 - **C**reate: Adding a new task.
 - **R**ead: Viewing your task list.
@@ -74,7 +74,7 @@ This is the heart of most apps:
 
 ---
 
-## 🚀 Getting Started (Run it yourself!)
+##  Getting Started (Run it yourself!)
 
 ### Backend Setup
 1. `cd backend`
@@ -90,7 +90,7 @@ This is the heart of most apps:
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 *(Add your screenshots here after running the app)*
 
