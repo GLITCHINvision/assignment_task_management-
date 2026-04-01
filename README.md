@@ -90,15 +90,6 @@ This is the heart of most apps:
 
 ---
 
-##  Screenshots
-
-*(Add your screenshots here after running the app)*
-
-1. **Landing Page**: A clean, minimalist entrance.
-2. **Dashboard**: The command center with analytics.
-3. **Task Form**: Where the magic happens (adding tasks).
-4. **Mobile View**: Fully responsive for on-the-go management.
-
 ---
 
 *Project developed as part of a Full-Stack Web Development assessment.*
