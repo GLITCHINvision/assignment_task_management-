@@ -1,0 +1,121 @@
+:root {
+  /* Architectural Zen Colors - Light Mode */
+  --primary: #0f172a;       /* Deep Slate */
+  --primary-hover: #334155;
+  --secondary: #6366f1;     /* Indigo Accent */
+  --background: #f8fafc;    /* Soft Off-White */
+  --surface: #ffffff;       /* Pure White */
+  --surface-hover: #f1f5f9; /* Subtle background for inputs */
+  --border: #e2e8f0;        /* Very Soft Gray */
+  --text: #0f172a;
+  --text-muted: #64748b;
+  
+  /* Priority Colors - More vibrant for highlighting */
+  --low: #10b981;           /* Emerald */
+  --medium: #f59e0b;        /* Amber */
+  --high: #ef4444;          /* Rose */
+  
+  /* Badge Backgrounds (Transparent variants) */
+  --low-bg: rgba(16, 185, 129, 0.1);
+  --medium-bg: rgba(245, 158, 11, 0.1);
+  --high-bg: rgba(239, 68, 68, 0.1);
+  
+  --success: #059669;
+  --error: #dc2626;
+
+  /* Spacing - Generous Whitespace */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+
+  /* Refined Shadows - No heavy boxes */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
+  --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.03);
+
+  /* Transitions */
+  --transition-normal: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Minimalism Utility classes - Lines instead of boxes */
+.minimalist-line {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.subtle-hover {
+  transition: all var(--transition-normal);
+}
+
+.subtle-hover:hover {
+  transform: translateX(4px);
+  color: var(--primary);
+}
+
+.container {
+  max-width: 1000px; /* More centered for focus */
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* Priority Badges */
+.priority-badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 2px 10px;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1;
+}
+
+.badge-low { color: var(--low); background-color: var(--low-bg); }
+.badge-medium { color: var(--medium); background-color: var(--medium-bg); }
+.badge-high { 
+  color: var(--high); 
+  background-color: var(--high-bg);
+  box-shadow: 0 0 10px var(--high-bg); /* Subtle "glow" for high priority */
+}
+
+.priority-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.priority-low { background-color: var(--low); }
+.priority-medium { background-color: var(--medium); }
+.priority-high { background-color: var(--high); }
+
+/* Status Highlights */
+.status-completed {
+  color: var(--success);
+  font-weight: 500;
+}
+
+.high-priority-item {
+  border-left: 2px solid var(--high);
+  padding-left: var(--space-sm) !important;
+}

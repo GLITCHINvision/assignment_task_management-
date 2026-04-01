@@ -1,0 +1,127 @@
+@import '../styles/design-system.css';
+
+:root {
+  background: var(--background);
+  color: var(--text);
+}
+
+body {
+  margin: 0;
+  display: block;  /* Normal block flow for traditional minimalist layout */
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--space-md) var(--space-sm);
+  text-align: left; /* Minimalist alignment */
+}
+
+/* Minimalism Utility - Line-based list */
+.minimalist-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.minimalist-item {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--space-sm);
+  transition: all var(--transition-normal);
+}
+
+.minimalist-item:hover {
+  border-bottom: 1px solid var(--primary);
+}
+
+.input-field {
+  width: 100%;
+  padding: var(--space-sm) 12px; /* Added some horizontal padding for comfort */
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  margin-bottom: var(--space-md);
+  outline: none;
+  transition: all var(--transition-normal);
+  border-radius: 4px 4px 0 0; /* Slight rounding at the top */
+}
+
+.input-field:hover, .input-field:focus {
+  background: var(--surface-hover); /* Added background for visibility as requested */
+  border-bottom: 1px solid var(--primary);
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: white;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 4px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: all var(--transition-normal);
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: var(--primary-hover);
+  letter-spacing: 0.1em;
+}
+
+.auth-form-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 70vh;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Productivity Overview */
+.stats-bar {
+  display: flex;
+  gap: var(--space-lg);
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--space-xl);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--primary);
+}
+
+.stat-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Progress Line - Extreme minimalist */
+.progress-line-container {
+  width: 100%;
+  height: 2px;
+  background: var(--border);
+  position: relative;
+  overflow: hidden;
+  margin-top: var(--space-sm);
+}
+
+.progress-line-fill {
+  height: 100%;
+  background: var(--secondary);
+  transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
