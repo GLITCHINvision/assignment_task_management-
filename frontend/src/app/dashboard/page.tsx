@@ -54,13 +54,13 @@ export default function DashboardPage() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Professional Analytics
+ 
   const stats = useMemo(() => {
     const completed = tasks.filter(t => t.status === 'COMPLETED').length;
     const pending = total - completed;
     const completionRate = total > 0 ? Math.round((completed / total) * 100) : 0;
     
-    // Weighted High Priority count (simplified for demo)
+    
     const highPriorityCount = tasks.filter(t => t.priority === 'HIGH' && t.status === 'PENDING').length;
 
     return { completed, pending, completionRate, highPriorityCount };
