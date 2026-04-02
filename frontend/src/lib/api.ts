@@ -10,7 +10,7 @@ const api = axios.create({
   },
 });
 
-// Interceptor to add Access Token from memory/Cookies
+
 api.interceptors.request.use((config) => {
   const token = typeof window !== 'undefined' ? localStorage.getItem('accessToken') : null;
   if (token) {
@@ -19,13 +19,13 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-// Interceptor to handle Refresh Token logic
+
 api.interceptors.response.use(
   (response) => response,
   async (error) => {
     const originalRequest = error.config;
 
-    // Handle both 401 (Unauthorized/No Token) and 403 (Forbidden/Expired Token)
+   
     if ((error.response?.status === 401 || error.response?.status === 403) && !originalRequest._retry) {
       originalRequest._retry = true;
       try {
@@ -34,7 +34,7 @@ api.interceptors.response.use(
         api.defaults.headers.common['Authorization'] = `Bearer ${data.accessToken}`;
         return api(originalRequest);
       } catch (refreshError) {
-        // Refresh token failed, logout user
+
         if (typeof window !== 'undefined') {
           localStorage.removeItem('accessToken');
           window.location.href = '/login';
