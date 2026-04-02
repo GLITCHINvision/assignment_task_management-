@@ -57,7 +57,7 @@ Once logged in, you see your personal workspace.
 
 ---
 
-##  Techniques & Methods (Explained Simply)
+##  Techniques & Methods 
 
 ###  JWT (JSON Web Tokens)
 Instead of the server remembering every user, it gives the user a "Digital ID Card" (the token). The user shows this card every time they want to see their tasks. It's like a hall pass in college!
@@ -74,7 +74,7 @@ This is the heart of most apps:
 
 ---
 
-##  Getting Started (Run it yourself!)
+##  Getting Started 
 
 ### Backend Setup
 1. `cd backend`
