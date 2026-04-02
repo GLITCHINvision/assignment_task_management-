@@ -17,16 +17,16 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 
-// Routes
+
 app.use('/auth', authRoutes);
 app.use('/tasks', taskRoutes);
 
-// Base route
+
 app.get('/', (req, res) => {
   res.json({ message: 'Task Management API is running' });
 });
 
-// Error Handling
+
 app.use(errorHandler);
 
 export default app;
